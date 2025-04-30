@@ -4,6 +4,22 @@ import (
 	"fmt"
 )
 
+func main() {
+	result, err := checkOperand(10, 0, "/")
+	if err != nil {
+		fmt.Println("Ошибка:", err)
+	} else {
+		fmt.Println("Результат:", result)
+	}
+
+	result, err = checkOperand(10, 2, "/")
+	if err != nil {
+		fmt.Println("Ошибка:", err)
+	} else {
+		fmt.Println("Результат:", result)
+	}
+}
+
 func add(operator1, operator2 float64) float64 {
 	return operator1 + operator2
 }
@@ -42,18 +58,3 @@ func checkOperand(operator, operator2 float64, operand string) (float64, error) 
 	}
 }
 
-func main() {
-	result, err := checkOperand(10, 0, "/")
-	if err != nil {
-		fmt.Println("Ошибка:", err)
-	} else {
-		fmt.Println("Результат:", result)
-	}
-
-	result, err = checkOperand(10, 2, "/")
-	if err != nil {
-		fmt.Println("Ошибка:", err)
-	} else {
-		fmt.Println("Результат:", result)
-	}
-}
